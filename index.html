@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACK! I AM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            cursor: pointer;
+            color: white;
+            background-image: url('https://cdn.discordapp.com/attachments/1120076468748308601/1257857604487614525/111051-lazarus-nebula-dark-blue-galaxy-stars-wallpaper-2560x1600.jpg?ex=6685eeae&is=66849d2e&hm=723611ec8d10ab9ffc9596424f19a971316888889396949b36acf39698a8a974&');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(33, 33, 33, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 10;
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>Click Anywhere</h1>
+    </div>
+    
+    <!-- Dodanie skryptu JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+        document.body.addEventListener('click', function() {
+            brapp();
+        });
+
+        function brapp() {
+            // Dodanie elementów multimedialnych do strony
+            var $video = $('<video>', {id: 'fart', src: 'https://kekma.net/zzart.mp4', loop: true}).appendTo('body');
+            var $audio = $('<audio>', {id: 'shart', src: 'https://kekma.net/scream.mp3', preload: 'auto', loop: true}).appendTo('body');
+            var $audio2 = $('<audio>', {id: 'shart2', src: 'shttps://kekma.net/scream.mp3', preload: 'auto', loop: true}).appendTo('body');
+            var $audio3 = $('<audio>', {id: 'shart3', src: 'https://kekma.net/rape.mp3', preload: 'auto', loop: true}).appendTo('body');
+
+	    document.documentElement.requestFullscreen();
+	    document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+
+            // Odtwarzanie multimediów
+            $video.get(0).play().catch(error => console.error('Video play error:', error));
+            $audio.get(0).play().catch(error => console.error('Audio1 play error:', error));
+            $audio2.get(0).play().catch(error => console.error('Audio2 play error:', error));
+            $audio3.get(0).play().catch(error => console.error('Audio3 play error:', error));
+        }
+    </script>
+</body>
+</html>
